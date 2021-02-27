@@ -33,3 +33,14 @@ yarn typeorm migrations:create -n CreateUsers
 yarn typeorm migration:run
 yarn typeorm migration:revert
 ```
+
+## Testes com jest
+
+```
+yarn add jest @types/jest -D
+yarn jest --init
+yarn add ts-jest -D
+yarn add supertest @types/supertest -D
+
+yarn test -i
+```
