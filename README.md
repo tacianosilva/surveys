@@ -19,6 +19,11 @@ yarn add ts-node-dev -D
 
 yarn add uuid
 yarn add @types/uuid -D
+
+yarn add nodemailer
+yarn add @types/nodemailer -D
+
+yarn add handlebars
 ```
 
 ## TypeORM
@@ -32,6 +37,9 @@ yarn add sqlite3
 yarn typeorm migrations:create -n CreateUsers
 yarn typeorm migration:run
 yarn typeorm migration:revert
+
+yarn typeorm migrations:create -n CreateSurveys
+yarn typeorm migrations:create -n CreateSurveysUsers
 ```
 
 ## Testes com jest
