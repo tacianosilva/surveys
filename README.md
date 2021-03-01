@@ -24,6 +24,14 @@ yarn add nodemailer
 yarn add @types/nodemailer -D
 
 yarn add handlebars
+yarn add yup
+yarn add express-async-errors
+```
+
+### Validação
+
+```
+yarn add yup
 ```
 
 ## TypeORM

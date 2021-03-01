@@ -4,9 +4,16 @@ import { app } from '../app';
 import createConnection from "../database";
 
 describe("Users", () => {
+
   beforeAll(async () => {
     const connection = await createConnection();
     await connection.runMigrations();
+  });
+
+  afterAll(async () => {
+    const connection = await createConnection();
+    await connection.dropDatabase();
+    await connection.close();
   });
 
   it("Should be able to create a new user", async () => {
@@ -25,10 +32,5 @@ describe("Users", () => {
     });
 
     expect(response.status).toBe(400);
-  });
-
-  afterAll(async () => {
-    const connection = await createConnection();
-    await connection.dropDatabase();
   });
 });
